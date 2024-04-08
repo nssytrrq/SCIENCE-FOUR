@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(foto/Pemandangan.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+  }
+
+  .wrap{
+    position: relative;
+    top: 15%;
+    background-color:rgba(255,255,255,0.7);
+    width: 80%;
+    height: 60%;
+    color:black;
+    margin: 20px auto;
+    padding:15px;
+    }
+
+  hr {
+    align-items:center;
+    width:25%;
+    border-top: 3px double #8c8b8b;
+  }
+
+  img {
+    width:200px; 
+    display: block;
+    border-radius: 50%;
+    border-color:white;
+    margin-right:30px;
+    border:2px; 
+  }
+
+  @media screen and (max-width: 700px) {
+    .wrap {
+      top: 0;
+      margin: 0;
+      width: 100%;
+      height: 70%;
+    }
+  }

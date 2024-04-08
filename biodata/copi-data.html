@@ -1,0 +1,154 @@
+<tr><td><b>Nama</b></td><td>:</td> <td>Mohammad Rafi Azka</td></tr>
+<tr><td><b>Alamat</b></td><td>:</td> <td>RUMAH</td></tr>
+<tr><td><b>TTL</b></td><td>:</td> <td>jombang, 13 juni 2007</td></tr>
+<tr><td><b>IG</b></td><td>:</td> <td>@azkaafl_</td></tr>
+<tr><td><b>Hobi</b></td><td>:</td> <td>Futsal</td></tr>
+<tr><td><b>Kata-kata</b></td><td>:</td> <td></td></tr></table>
+<table>
+<h3>Riwayat Pendidikan</h3>
+<tr><td><b>SD</b></td><td>:</td> <td>SD Al Muslim</td></tr>
+<tr><td><b>SMP</b></td><td>:</td> <td>SMP Raudhatul Jannnah</td></tr>
+<tr><td><b>SMK</b></td><td>:</td> <td>SMAT Tebuireng</td></tr>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERBAIKAN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: whitesmoke;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .processing {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+        }
+
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+svg {
+	font-family: "Russo One", sans-serif;
+    width: 100%;
+    height: 20%;
+}
+svg text {
+	animation: stroke 5s infinite alternate;
+	stroke-width: 2;
+	stroke: #365FA0;
+	font-size: 40px;
+}
+
+@keyframes stroke {
+	0%   {
+		fill: rgba(72,138,204,0); stroke: rgba(54,95,160,1);
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(72,138,204,0); stroke: rgba(54,95,160,1); }
+	80%  {fill: rgba(72,138,204,0); stroke: rgba(54,95,160,1); stroke-width: 3; }
+	100% {
+		fill: rgba(72,138,204,1); stroke: rgba(54,95,160,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+
+@media screen and (max-width: 835px) {
+    svg text {
+        font-size: 30;
+    }   
+}
+
+@media screen and (max-width: 645px) {
+    svg text {
+        font-size: 20;
+    }   
+}
+
+
+.progress-wrapper {
+    position: relative;
+    width: 50%;
+    height: 20px;
+    background: rgba(54,95,160,1);
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 20px ;
+    box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.progress {
+    width: 0%;
+    background: white;
+    border-radius: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.progress span {
+    position: relative;
+    font-weight: 800;
+    top: 13px;
+    left: 25px;
+    transform: skewX();
+}
+    </style>
+</head>
+<body>
+    <div class="processing" id="sec2">
+        <svg class="s-1">
+            <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+                HALAMAN DALAM TAHAP PENGEMBANGAN
+            </text>
+        </svg>
+
+        <!-- <div class="progress-wrapper">
+            <div class="progress"><span>0%</span></div>
+        </div> -->
+
+    </div>
+
+    <script>
+        const progress = document.querySelector('.progress');
+        const progress_precentage = document.querySelector('.progress span');
+
+        let per = 0;
+
+        function progressLoad() {
+            if (per >= 40) {
+                progress.style.width = '40%';
+                progress_precentage.innerHTML = '40%';
+            } else {
+                progress.style.width = `${per}%`;  // Use backticks here
+                progress_precentage.innerHTML = `${per}%`;  // Use backticks here
+            }
+            per++;
+        }
+
+        setInterval(progressLoad, 90);
+        </script>
+
+    <script>
+        const processing = document.querySelector('.processing-bar');
+
+        setTimeout(() => {
+            processing.style.opacity = 1;
+            processing.style.width = processing.getAttribute('data-bar') + '%%';
+        }, 500)
+    </script>
+
+</body>
+</html>
